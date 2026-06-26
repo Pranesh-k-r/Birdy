@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+
+background:linear-gradient(-45deg,#ff4e8b,#ff758c,#ff7eb3,#ffc3a0);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.container{
+
+text-align:center;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+width:90%;
+max-width:800px;
+
+z-index:10;
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+color:white;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+
+}
+
+h2{
+
+margin-top:15px;
+color:white;
+font-size:30px;
+
+}
+
+p{
+
+margin-top:25px;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:white;
+
+}
+
+button{
+
+margin-top:40px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff2f70;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Hearts */
+
+.hearts{
+
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:white;
+
+animation:float linear forwards;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* Fireworks */
+
+.firework{
+
+position:fixed;
+
+width:8px;
+height:8px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+video{
+    max-width:100%;
+    height:auto;
+}
+
+.container,
+.card{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+}
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:35px;
+    }
+
+    h2{
+        font-size:25px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    button{
+        width:100%;
+        max-width:300px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+
+<h1>🎉 Happy Birthday ❤️</h1>
+
+<h2>My Beautiful Princess 👑</h2>
+
+<p>
+Thank you for taking the time to explore this little birthday website.
+
+Every page was made with appreciation for our friendship and all the wonderful memories we've shared.
+
+May this year bring you happiness, success, good health, and countless reasons to smile.
+
+Never stop being the kind, strong, and amazing person you are.
+
+Happy Birthday once again!
+
+Wishing you all the best,
+
+Your Best Friend 💙</b>
+
+</p>
+
+<button onclick="location.href='index.html'">
+
+🏠 Back to Home
+
+</button>
+
+</div>
+
+<script>
+
+/* Floating Hearts */
+
+const hearts=document.querySelector(".hearts");
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*30)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>heart.remove(),10000);
+
+},300);
+
+/* Fireworks */
+
+function fireworks(){
+
+for(let i=0;i<180;i++){
+
+let f=document.createElement("div");
+
+f.className="firework";
+
+f.style.left=50+"vw";
+f.style.top=50+"vh";
+
+f.style.background=`hsl(${Math.random()*360},100%,60%)`;
+
+document.body.appendChild(f);
+
+let angle=Math.random()*2*Math.PI;
+
+let distance=80+Math.random()*180;
+
+let x=Math.cos(angle)*distance;
+
+let y=Math.sin(angle)*distance;
+
+f.animate([
+
+{transform:"translate(0,0)",opacity:1},
+
+{transform:`translate(${x}px,${y}px)`,opacity:0}
+
+],{
+
+duration:1500,
+
+easing:"ease-out"
+
+});
+
+setTimeout(()=>f.remove(),1500);
+
+}
+
+}
+
+fireworks();
+
+setInterval(fireworks,2500);
+
+</script>
+
+</body>
+</html>

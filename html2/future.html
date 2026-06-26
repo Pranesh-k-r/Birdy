@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Future ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+min-height:100vh;
+padding:40px 20px;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:white;
+animation:float linear forwards;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:65px;
+text-align:center;
+color:white;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:white;
+font-size:20px;
+margin-bottom:40px;
+}
+
+.grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+color:white;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.card .icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.7;
+}
+
+.promise{
+max-width:900px;
+margin:50px auto;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:25px;
+color:white;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.promise h2{
+margin-bottom:20px;
+font-size:35px;
+font-family:'Great Vibes',cursive;
+}
+
+.promise p{
+font-size:18px;
+line-height:2;
+}
+
+.buttons{
+max-width:900px;
+margin:40px auto;
+display:flex;
+justify-content:space-between;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4f81;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:45px;
+}
+
+.buttons{
+flex-direction:column;
+gap:15px;
+}
+
+button{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<h1>Our Future Together ❤️</h1>
+
+<p class="subtitle">
+The best chapters of our story are still waiting to be written.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✈️</div>
+<h3>Travel Together</h3>
+<p>Let's explore beautiful places, make unforgettable memories, and collect moments that last forever.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌅</div>
+<h3>Watch Sunsets</h3>
+<p>Holding your hand while watching sunsets is one of my biggest dreams.</p>
+</div>
+
+<div class="card">
+<div class="icon">🍕</div>
+<h3>Food Dates</h3>
+<p>Trying new cafés and sharing desserts with you will always be my favorite plan.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎬</div>
+<h3>Movie Nights</h3>
+<p>Blankets, popcorn, your smile, and our favorite movies—that's my perfect evening.</p>
+</div>
+
+<div class="card">
+<div class="icon">📸</div>
+<h3>More Memories</h3>
+<p>Thousands of photos together, each one reminding us of our beautiful journey.</p>
+</div>
+
+<div class="card">
+<div class="icon">💍</div>
+<h3>Forever</h3>
+<p>Whatever the future brings, I hope we continue writing our story together.</p>
+</div>
+
+</div>
+
+<div class="promise">
+
+<h2>My Promise ❤️</h2>
+
+<p>
+I promise to always respect you, support your dreams, make you smile, stand beside you during difficult times, celebrate every happy moment with you, and love you a little more every single day.
+
+No matter what life brings, I'll always choose you.
+
+Forever and Always. ❤️
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="location.href='reasons.html'">
+⬅ Previous
+</button>
+
+<button onclick="location.href='gift.html'">
+Next ➜
+</button>
+
+</div>
+
+<script>
+
+const hearts=document.querySelector(".hearts");
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>

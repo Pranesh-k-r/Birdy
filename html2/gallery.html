@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Gallery 📸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    text-align:center;
+    color:white;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+p{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+.gallery{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.buttons{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff2f70;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+video{
+    max-width:100%;
+    height:auto;
+}
+
+.container,
+.card{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+}
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:35px;
+    }
+
+    h2{
+        font-size:25px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    button{
+        width:100%;
+        max-width:300px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<h1>📸 Kothii...</h1>
+
+<p>
+This gift is just a small way of saying...
+
+Thank you for being such a wonderful friend.
+
+I hope this brings a smile to your face.
+
+Happy Birthday! 🎂
+</p>
+
+<div class="gallery">
+
+    <img src="kothi6.jpeg" alt="Photo 1">
+    <img src="kothi5.jpeg" alt="Photo 2">
+    <img src="kothi3.jpeg" alt="Photo 3">
+    <img src="kothi7.jpeg" alt="Photo 4">
+    <img src="kothi8.jpeg" alt="Photo 5">
+    <img src="kothi2.jpeg" alt="Photo 6">
+
+</div>
+
+<div class="buttons">
+
+    <button onclick="location.href='letter.html'">
+        ⬅ Previous
+    </button>
+
+    <button onclick="location.href='gift.html'">
+        Next ➜
+    </button>
+
+</div>
+
+</body>
+</html>
